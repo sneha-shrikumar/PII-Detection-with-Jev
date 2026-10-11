@@ -295,11 +295,11 @@ def compare():
     haiku_cost = stats["haiku"]["cost_1k"]
 
     def verdicts(s, k):
-        v = {"High-risk leaks (target 0)": (s["high_leaks"], s["high_leaks"] == 0),
-             "Invented text (target 0)": (s["invented"], s["invented"] == 0),
-             f"Cost per 1,000 chats (under ${P.COST_CAP_PER_1K:.2f})": (f"${s['cost_1k']:.3f}", s["cost_1k"] < P.COST_CAP_PER_1K),
-             f"Precision, all categories (over {P.PRECISION_MIN:.0%})":
-                 ("{:.1%} ({}/{})".format(*s["precision"]), s["precision"][0] > P.PRECISION_MIN)}
+        v = {"1. High-risk leaks (target 0)": (s["high_leaks"], s["high_leaks"] == 0),
+             f"2. Precision, all categories (over {P.PRECISION_MIN:.0%})":
+                 ("{:.1%} ({}/{})".format(*s["precision"]), s["precision"][0] > P.PRECISION_MIN),
+             "3. Invented text (target 0)": (s["invented"], s["invented"] == 0),
+             f"4. Cost per 1,000 chats (under ${P.COST_CAP_PER_1K:.2f})": (f"${s['cost_1k']:.3f}", s["cost_1k"] < P.COST_CAP_PER_1K)}
         if k != "haiku":
             v["Cheaper than Haiku alone"] = (f"${s['cost_1k']:.3f} vs ${haiku_cost:.3f}", s["cost_1k"] < haiku_cost)
         return v

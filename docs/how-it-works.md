@@ -66,14 +66,14 @@ The label columns in the CSV (`has_pii`, `pii_types`, `tags`, `spans_json`) neve
 - **Precision** is the share of extracted items that overlap an expected PII span, across all 7 types.
 - **Cost** uses the real cost OpenRouter reports for Haiku, and Jev's published price per token.
 
-### Release gate
+### Release gate, in priority order
 
-| Check | Passes when |
-|---|---|
-| High-risk leaks | 0 card or ID numbers leaked |
-| Invented text | 0 Haiku items not found in the chat |
-| Cost | under $0.50 per 1,000 chats, Jev and Haiku together |
-| Precision | over 90% of extracted items are real PII |
+| # | Check | Passes when |
+|---|---|---|
+| 1 | High-risk leaks | 0 card or ID numbers leaked |
+| 2 | Precision | over 90% of extracted items are real PII |
+| 3 | Invented text | 0 Haiku items not found in the chat |
+| 4 | Cost | under $0.50 per 1,000 chats, Jev and Haiku together |
 
 ## The comparison
 

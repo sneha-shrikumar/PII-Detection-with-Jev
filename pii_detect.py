@@ -758,10 +758,10 @@ def release_gate(labelled, ok):
        Jev said yes to its category and Haiku extracted it, or when the chat was sent to a person
        for that category (Jev under REVIEW_BELOW sure). Anything else is a LEAK.
        Medium-risk leaks are reported, but have no target.
-    2. Zero invented text: every item Haiku returns must appear word-for-word in the chat.
-    3. Cost: Jev + Haiku under COST_CAP_PER_1K per 1,000 chats. Speed is recorded, not gated.
-    4. Precision: more than PRECISION_MIN of the extracted items (all categories) are real PII,
+    2. Precision: more than PRECISION_MIN of the extracted items (all categories) are real PII,
        so the output isn't over-redacted.
+    3. Zero invented text: every item Haiku returns must appear word-for-word in the chat.
+    4. Cost: Jev + Haiku under COST_CAP_PER_1K per 1,000 chats. Speed is recorded, not gated.
     """
     def gold_spans(r, c):
         return [g for g in r["labels"]["spans"] if g["label"] == c]
@@ -797,11 +797,11 @@ def release_gate(labelled, ok):
         ["1. High-risk recall (card, NRIC/passport)", "0 leaks",
          f"{sum(row[7] for row in rows if row[1] == 'high')} leaks",
          "PASS" if all(v == "PASS" for v in verdicts.values()) else "FAIL"],
-        ["2. Invented text (Haiku items not in the chat)", "0", str(invented), "PASS" if invented == 0 else "FAIL"],
-        ["3. Cost per 1,000 chats (Jev + Haiku)", f"under ${COST_CAP_PER_1K:.2f}", f"${cost_1k:.3f}",
-         "PASS" if cost_1k < COST_CAP_PER_1K else "FAIL"],
-        ["4. Precision (extracted items that are real PII, all categories)", f"over {PRECISION_MIN:.0%}",
+        ["2. Precision (extracted items that are real PII, all categories)", f"over {PRECISION_MIN:.0%}",
          f"{precision:.1%} ({hit}/{n})", "PASS" if precision > PRECISION_MIN else "FAIL"],
+        ["3. Invented text (Haiku items not in the chat)", "0", str(invented), "PASS" if invented == 0 else "FAIL"],
+        ["4. Cost per 1,000 chats (Jev + Haiku)", f"under ${COST_CAP_PER_1K:.2f}", f"${cost_1k:.3f}",
+         "PASS" if cost_1k < COST_CAP_PER_1K else "FAIL"],
     ]
     overall = "PASS" if all(c[3] == "PASS" for c in checks) else "FAIL"
     tables = [(f"RELEASE GATE: {overall}", ["Check", "Target", "This run", "Result"], checks),

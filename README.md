@@ -30,17 +30,31 @@ flowchart TD
 
 Jev reads every chat. Haiku only sees the chats Jev flags, which was 61 of 350 in the test. Card and ID numbers are high risk, so they go to a person when Jev is under 95% sure. The other five go to a person when Jev is under 80% sure. An unsure chat still goes to Haiku, so the person sees what was found. Haiku can't change the chat: Python checks that every item it returns appears in the chat character for character.
 
+## 🎯 The release gate, in priority order
+
+The tool ships only if it passes all four checks.
+
+| # | Check | Target | What it checks |
+|---|---|---|---|
+| 1 | **High-risk leaks** | 0 | No card or NRIC / passport number is left in a chat. A number counts as safe if it was redacted, or if the chat went to a person to check. |
+| 2 | **Precision** | over 90% | At least 9 in 10 redacted items are real PII, so the redacted chats are still readable. |
+| 3 | **Invented text** | 0 | Every redacted item is copied word for word from the chat, so redaction never adds or changes text. |
+| 4 | **Cost** | under $0.50 per 1,000 chats | Cheap enough to run on every chat. |
+
 ## 🏁 The result
 
 | | Jev + Haiku | Haiku alone | Presidio |
 |---|---|---|---|
-| Release gate | ✅ Ship | ❌ Fail | ❌ Fail |
+| **Release gate** | ✅ **Ship** | ❌ Fail | ❌ Fail |
+| 1. High-risk leaks | ✅ 0 of 7 | ✅ 0 of 7 | ❌ 2 of 7 |
+| 2. Precision | ✅ 96% | ❌ 62% | ❌ 7% |
+| 3. Invented text | ✅ 0 | ✅ 0 | ✅ 0 |
+| 4. Cost per 1,000 chats | ✅ $0.26 | ❌ $0.85 | ✅ free |
 | PII found | 69 of 69 | 69 of 69 | 50 of 69 |
-| High-risk items leaked | 0 of 7 | 0 of 7 | 2 of 7 |
-| Redacted items that were real PII | **96%** | 62% | 7% |
 | Clean chats changed by redaction | 2 of 298 | 38 of 298 | 267 of 298 |
 | Chats sent to a person | 16 (4.6%) | none | none |
-| Cost per 1,000 chats | $0.26 | $0.85 | free |
+
+*Scored on 350 held-out chats (52 with PII, 69 PII items). Medium-risk leaks are reported but not gated: Jev + Haiku had 0.*
 
 ```mermaid
 quadrantChart
@@ -65,19 +79,6 @@ Both Claude setups found every piece of PII. The difference is what else they re
 | Customer: Just call me Ravi, that's fine. | *unchanged* | Customer: Just call me [FULL_NAME], that's fine. |
 
 Presidio missed half of the split card number above and labelled it a phone number. It also missed an NRIC written in Malay ("Nombor kad pengenalan saya T5818141I") and tagged the Malay words as a person's name.
-
-## 🎯 The release gate
-
-The tool ships only if all four checks pass.
-
-| Check | Target | Jev + Haiku | Haiku alone | Presidio | Why this bar |
-|---|---|---|---|---|---|
-| High-risk leaks | 0 | ✅ 0 | ✅ 0 | ❌ 2 | A leaked card or ID number is the worst case. An item counts as safe if it was redacted or sent to a person. |
-| Invented text | 0 | ✅ 0 | ✅ 0 | ✅ 0 | Redaction must never change anything that isn't in the chat. |
-| Cost per 1,000 chats | under $0.50 | ✅ $0.26 | ❌ $0.85 | ✅ $0 | This has to run on every chat, not a sample. |
-| Precision | over 90% | ✅ 96% | ❌ 62% | ❌ 7% | If everything gets redacted, nobody can use the chats. |
-
-*Scored on 350 held-out chats (52 with PII, 69 PII items). Medium-risk leaks are reported but not gated: Jev + Haiku had 0.*
 
 ## 💡 What I learned
 

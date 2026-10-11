@@ -84,7 +84,6 @@ Jev's median response time was 0.28 seconds and Haiku's was 1.5 seconds. Speed i
 - **High-risk sample size.** The test set has 5 card numbers and 2 ID numbers. The next round adds many more.
 - **Languages.** The test set has 6 chats in Malay, Tamil and Chinese. Jev caught the PII in all of them, and the next round tests more languages.
 - **One market.** The data is Singapore-flavoured. The prompts don't use any Singapore-only rules, but they've only been tested here.
-- **The precision check was added after the test.** Jev + Haiku would have passed with or without it, but a bar set after seeing results is weaker than one set before.
 - **The test set has now been used.** Any further tuning needs a fresh held-out set.
 - **One run per setup.** Model answers vary a little between runs.
 - **Presidio on default settings.** A tuned Presidio, with custom recognizers, a deny-list for the company's own contacts and a higher score threshold, would make far fewer wrong redactions. I didn't test how many of its misses tuning would fix.

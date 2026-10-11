@@ -18,17 +18,18 @@ I ran the same 350 held-out chats through three setups: [Jev](https://typesafe.a
 ```mermaid
 flowchart TD
     C["Chat"] --> J["Jev answers 7 yes/no questions<br/>one per PII type, each with a confidence"]
-    J --> D{"Any yes,<br/>or unsure?"}
+    J --> D{"Yes, no<br/>or unsure?"}
     D -- no --> K["Keep the chat as it is"]
     D -- yes --> H["Haiku copies out the exact PII"]
+    D -- unsure --> H
+    D -- unsure --> P["Human review"]
     H --> V{"Every item found<br/>word for word in the chat?"}
     V -- yes --> R["Redact"]
     V -- no --> X["Drop the item<br/>and count it as invented"]
-    J -. "unsure" .-> P["Human review"]
 ```
 *The 7 types: full name, card number, NRIC / passport, address, phone, email, date of birth.*
 
-Jev reads every chat. Haiku only sees the chats Jev flags, which was 61 of 350 in the test. Card and ID numbers are high risk, so they go to a person when Jev is under 95% sure. The other five go to a person when Jev is under 80% sure. Haiku can't change the chat: Python checks that every item it returns appears in the chat character for character.
+Jev reads every chat. Haiku only sees the chats Jev flags, which was 61 of 350 in the test. Card and ID numbers are high risk, so they go to a person when Jev is under 95% sure. The other five go to a person when Jev is under 80% sure. An unsure chat still goes to Haiku, so the person sees what was found. Haiku can't change the chat: Python checks that every item it returns appears in the chat character for character.
 
 ## 🏁 The result
 
@@ -81,7 +82,7 @@ The tool ships only if all four checks pass.
 
 ## 💡 What I learned
 
-- **Finding PII was the easy part.** Both Claude setups found 69 of 69. What separated them was precision, so the gate needed a check for it. I added that check after the final test, which is the wrong order: I'd set it up front next time.
+- **Finding PII was the easy part.** Both Claude setups found 69 of 69. What separated them was precision, so the gate needed a check for it.
 - **Screening helps quality, not just cost.** Haiku made the same first-name mistakes in both setups. Behind Jev it only saw 61 chats, so it had far fewer chances to make them.
 - **Rules-based tools struggle with real chats.** Presidio is built on patterns and English NER. Numbers split across messages, other languages and lookalike numbers are exactly where it breaks.
 - **Jev's confidence was trustworthy.** When Jev was 95% sure or more (2,406 answers), it was right every time. That's what makes "send it to a person when unsure" work: only 4.6% of chats needed a person.

@@ -21,7 +21,6 @@ flowchart TD
     J --> D{"Yes, no<br/>or unsure?"}
     D -- no --> K["Keep the chat as it is"]
     D -- yes --> H["Haiku copies out the exact PII"]
-    D -- unsure --> H
     D -- unsure --> P["Human review"]
     H --> V{"Every item found<br/>word for word in the chat?"}
     V -- yes --> R["Redact"]

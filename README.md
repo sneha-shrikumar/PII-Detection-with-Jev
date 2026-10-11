@@ -54,7 +54,7 @@ The tool ships only if it passes all four checks.
 | Clean chats changed by redaction | 2 of 298 | 38 of 298 | 267 of 298 |
 | Chats sent to a person | 16 (4.6%) | none | none |
 
-*Scored on 350 held-out chats (52 with PII, 69 PII items). Medium-risk leaks are reported but not gated: Jev + Haiku had 0.*
+*Scored on 350 held-out chats.
 
 ```mermaid
 quadrantChart

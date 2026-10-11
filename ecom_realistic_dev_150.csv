@@ -1,0 +1,769 @@
+﻿id,text,has_pii,pii_types,tags,spans_json
+ECOM_REALISTIC-0001,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Can I change the delivery slot for 88299796?
+Agent: Yes, I can move it to June 10. Morning or afternoon?
+Customer: Afternoon please.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0002,"Agent: Hi there, how can I help you today?
+Customer: The tracking number 4421 1753 6170 6171 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0006,"Agent: What number should the rider call?
+Customer: It's +65 9546...
+Agent: Mm-hmm.
+Customer: 1567.
+Agent: Got it, thank you.",TRUE,PHONE,pii_split|split_across_turns,"[{""start"": 57, ""end"": 65, ""label"": ""PHONE"", ""text"": ""+65 9546"", ""entity"": ""g""}, {""start"": 94, ""end"": 98, ""label"": ""PHONE"", ""text"": ""1567"", ""entity"": ""g""}]"
+ECOM_REALISTIC-0016,"Agent: Hi there, how can I help you today?
+Customer: Where do I send a complaint?
+Agent: Please write to returns@shopsite.com and quote your order number.
+Customer: Add (65) 8549-3296 as the contact for order 80463745.
+Agent: Can I have the name on the order?
+Customer: Bill Clark.",TRUE,FULL_NAME|PHONE,business_contact|formatting_variant|lookalike_number|name_is_a_word|pii_count_2|pii_multi,"[{""start"": 169, ""end"": 183, ""label"": ""PHONE"", ""text"": ""(65) 8549-3296"", ""entity"": ""e0""}, {""start"": 270, ""end"": 280, ""label"": ""FULL_NAME"", ""text"": ""Bill Clark"", ""entity"": ""e1""}]"
+ECOM_REALISTIC-0018,"Customer: Nama saya Siti Nurhaliza binte Ahmad, boleh tolong saya?
+Customer: The Mark II Headphones arrived damaged.
+Agent: I'm sorry to hear that. Could you upload a photo of the damage?
+Customer: Sure, uploading now.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",TRUE,FULL_NAME,multilingual_lang|pii_single|product_name,"[{""start"": 20, ""end"": 46, ""label"": ""FULL_NAME"", ""text"": ""Siti Nurhaliza binte Ahmad"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0022,"Agent: Hi there, how can I help you today?
+Customer: Why was I charged S$9.90 for shipping?
+Agent: Orders under S$50 have a shipping fee.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean,[]
+ECOM_REALISTIC-0024,"Customer: My voucher expires on April 10, can I still use it?",FALSE,,hard_negative|neg_non_dob_date|non_dob_date,[]
+ECOM_REALISTIC-0027,"Customer: Do you accept PayNow?
+Agent: Yes, PayNow, cards and e-wallets are all accepted.
+Customer: I was charged twice for 95402547.
+Agent: I'll check with payments. Any duplicate will be refunded within 3 working days.
+Customer: Can I use two vouchers on one order?
+Agent: Only one voucher per order, I'm afraid.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0028,"Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.
+Customer: 我的手机号码是 +65 9777 5204。",TRUE,PHONE,multilingual_lang|pii_single,"[{""start"": 180, ""end"": 193, ""label"": ""PHONE"", ""text"": ""+65 9777 5204"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0036,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: How do I return the Mark II Headphones?
+Agent: You can return it within 2 days. I'll send a return label.
+Customer: Please refund it to the card ending oh eight three four.
+Agent: Noted. It goes back to the original payment method.
+Customer: Is there a number I can call?
+Agent: Our hotline is 1800 327 6507, open nine to six.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,business_contact|clean|partial_card|product_name,[]
+ECOM_REALISTIC-0039,"Customer: Just call me Mei, that's fine.",FALSE,,first_name_only|hard_negative|neg_name_not_full,[]
+ECOM_REALISTIC-0042,"Agent: Hi Michael, welcome back! How can I help today?
+Customer: Can I change the delivery slot for #97393852?
+Agent: Yes, I can move it to October 5. Morning or afternoon?
+Customer: Afternoon please.
+Customer: How long does shipping to Johor Bahru take?
+Agent: Usually 30 working days.",FALSE,,clean|first_name_only|lookalike_number|non_dob_date|place_not_address,[]
+ECOM_REALISTIC-0043,"Customer: Do you have the Wireless Earbuds Pro in S?
+Agent: Yes, size 42 is in stock. Want me to add it to your cart?
+Customer: Is the Jack Leather Wallet waterproof?
+Agent: It's water-resistant but not fully waterproof.
+Customer: What's the difference between the Faith Yoga Mat and the standard version?
+Agent: The main difference is the material and the warranty length.
+Customer: Where is my order SG6196399076?
+Agent: It shipped yesterday and should arrive by 7 October.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|lookalike_number|non_dob_date|product_name,[]
+ECOM_REALISTIC-0044,"Agent: Hi Michael, welcome back! How can I help today?
+Customer: Just call me Michael, that's fine.
+Customer: Just call me Olivia, that's fine.",FALSE,,first_name_only|hard_negative|neg_name_not_full,[]
+ECOM_REALISTIC-0048,Agent: We have a collection point in Orchard.,FALSE,,hard_negative|neg_place_not_address|place_not_address,[]
+ECOM_REALISTIC-0050,"Customer: Is the Hope Scented Candle still returnable? It's been 14 days.
+Agent: Unused items are returnable within 14 days.
+Customer: When will my refund for SG9786305050 arrive?
+Agent: Refunds take 7 working days after we receive the item.",FALSE,,clean|lookalike_number|product_name,[]
+ECOM_REALISTIC-0056,"Agent: Hi there, how can I help you today?
+Customer: Why was I charged S$3.90 for shipping?
+Agent: Orders under S$40 have a shipping fee.",FALSE,,clean,[]
+ECOM_REALISTIC-0057,Agent: We have a collection point in Bishan.,FALSE,,hard_negative|neg_place_not_address|place_not_address,[]
+ECOM_REALISTIC-0058,"Agent: Hi Ravi, thanks for waiting.
+Customer: I'm looking at the Wireless Earbuds Pro, can it be gift wrapped?
+Customer: How do I cancel #91463031?
+Agent: I can cancel it as long as it hasn't shipped. Done, you'll get a confirmation shortly.",FALSE,,first_name_only|hard_negative|lookalike_number|neg_name_not_full|product_name,[]
+ECOM_REALISTIC-0070,"Agent: Hi there, how can I help you today?
+Customer: The ceramic dinner set arrived damaged.
+Agent: I'm sorry to hear that. Could you upload a photo of the damage?
+Customer: Sure, uploading now.
+Customer: When will my refund for 86659184 arrive?
+Agent: Refunds take 3 working days after we receive the item.
+Customer: Please refund it to the card ending three oh six two.
+Agent: Noted. It goes back to the original payment method.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number|partial_card|product_name,[]
+ECOM_REALISTIC-0075,"Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.",FALSE,,clean,[]
+ECOM_REALISTIC-0076,"Customer: I received the wrong size. I ordered L but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: Please refund it to the card ending 6782.
+Agent: Noted. It goes back to the original payment method.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|partial_card,[]
+ECOM_REALISTIC-0078,"Agent: Your order was placed on 24 April and ships in 2 days.
+Agent: Your order was placed on January 8 and ships in 30 days.",FALSE,,hard_negative|neg_non_dob_date|non_dob_date,[]
+ECOM_REALISTIC-0079,"Customer: The payment failed twice.
+Agent: Sorry about that. Please try another payment method or check with your bank.
+Customer: I never got the confirmation email. Please use klim84@icloud.com.
+Agent: Got it, thank you.",TRUE,EMAIL,formatting_variant|pii_single,"[{""start"": 177, ""end"": 194, ""label"": ""EMAIL"", ""text"": ""klim84@icloud.com"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0082,"Customer: When will my refund for #89653136 arrive?
+Agent: Refunds take 2 working days after we receive the item.
+Customer: How do I return the Jack Leather Wallet?
+Agent: You can return it within 30 days. I'll send a return label.
+Customer: Is there a number I can call?
+Agent: Our hotline is 6982 4741, open nine to six.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,business_contact|clean|lookalike_number|product_name,[]
+ECOM_REALISTIC-0096,"Agent: Is this the Visa ending 4123 on file?
+Customer: Yes, that's the one.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0097,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Is the Wireless Earbuds Pro waterproof?
+Agent: It's water-resistant but not fully waterproof.
+Customer: Is this a good gift for my eight year old?
+Agent: It's suitable for ages six and above.
+Customer: The payment failed twice.
+Agent: Sorry about that. Please try another payment method or check with your bank.",FALSE,,age_not_dob|clean|product_name,[]
+ECOM_REALISTIC-0099,Customer: Please update my account email to rachel dot chua at outlook dot com.,TRUE,EMAIL,pii_single|spoken_number,"[{""start"": 44, ""end"": 78, ""label"": ""EMAIL"", ""text"": ""rachel dot chua at outlook dot com"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0102,"Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.
+Customer: Can I get an update on SG9051699187?
+Agent: It's out for delivery today.
+Customer: Where is my order #97430003?
+Agent: It shipped yesterday and should arrive by 14 April.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0107,"Agent: Is the child under 13? Some items have age limits.
+Customer: Yes, she's 12.",FALSE,,age_not_dob|hard_negative|neg_age_not_dob,[]
+ECOM_REALISTIC-0112,"Agent: Hi Aisyah, welcome back! How can I help today?
+Customer: The Rose Gold Watch arrived damaged.
+Agent: I'm sorry to hear that. Could you upload a photo of the damage?
+Customer: Sure, uploading now.
+Customer: How do I return the Hope Scented Candle?
+Agent: You can return it within 7 days. I'll send a return label.
+Customer: Do you ship to Woodlands?
+Agent: Yes, we do. Delivery takes 7 working days.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|first_name_only|place_not_address|product_name,[]
+ECOM_REALISTIC-0113,Customer: It's a gift for my 7 year old.,FALSE,,age_not_dob|hard_negative|neg_age_not_dob,[]
+ECOM_REALISTIC-0117,"Agent: Hi there, how can I help you today?
+Customer: The tracking number 5989534396112910 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.
+Customer: Can I get an update on #03678812?
+Agent: It's out for delivery today.
+Customer: How long does shipping to Johor Bahru take?
+Agent: Usually 14 working days.
+Customer: Can I use two vouchers on one order?
+Agent: Only one voucher per order, I'm afraid.",FALSE,,clean|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0118,"Agent: Hi Aisyah, welcome back! How can I help today?
+Customer: I live around Yishun, near the MRT. Can you deliver there?
+Customer: I live around Sentosa, near the MRT. Can you deliver there?
+Customer: Can I add a gift message to the order?
+Agent: Yes, I've added it.",FALSE,,first_name_only|hard_negative|neg_place_not_address|place_not_address,[]
+ECOM_REALISTIC-0121,"Agent: Hi Aisyah, welcome back! How can I help today?
+Customer: Can I change the delivery slot for 97435031?
+Agent: Yes, I can move it to March 16. Morning or afternoon?
+Customer: Afternoon please.
+Customer: The tracking number 9500 5281 2735 8573 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.
+Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.",FALSE,,clean|first_name_only|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0123,"Agent: Hi James, welcome back! How can I help today?
+Customer: Is this a good gift for my seven year old?
+Agent: It's suitable for ages six and above.
+Customer: Do you have the blue waterproof backpack in S?
+Agent: Yes, L is in stock. Want me to add it to your cart?
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,age_not_dob|clean|first_name_only|product_name,[]
+ECOM_REALISTIC-0125,"Customer: My coupon SAVE20 isn't working.
+Agent: That code expired on 25/03/2026. I can offer you another one.
+Customer: I was charged twice for 91452111.
+Agent: I'll check with payments. Any duplicate will be refunded within 30 working days.
+Customer: Is the 5L air fryer back in stock?
+Agent: We expect new stock by 10 August.",FALSE,,clean|lookalike_number|non_dob_date|product_name,[]
+ECOM_REALISTIC-0128,"Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Clementi outlet.
+Customer: Can I add a gift message to the order?
+Agent: Yes, I've added it.
+Customer: Is there a number I can call?
+Agent: Our hotline is 6084 9649, open nine to six.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,business_contact|clean|place_not_address,[]
+ECOM_REALISTIC-0135,"Customer: How do I cancel #87232440?
+Agent: I can cancel it as long as it hasn't shipped. Done, you'll get a confirmation shortly.
+Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Clementi outlet.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0137,"Customer: Where is my order #99023557?
+Agent: It shipped yesterday and should arrive by 21/01/2026.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0142,"Customer: Do you have the Faith Yoga Mat in L?
+Agent: Yes, S is in stock. Want me to add it to your cart?
+Customer: Send it to my office instead, 337 Yishun Ring Road, #29-18, Singapore 365868.
+Agent: Got it, thank you.",TRUE,ADDRESS,formatting_variant|pii_single|product_name,"[{""start"": 146, ""end"": 192, ""label"": ""ADDRESS"", ""text"": ""337 Yishun Ring Road, #29-18, Singapore 365868"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0146,"Agent: What number should the rider call?
+Customer: It's nine zero zero eight...
+Agent: Mm-hmm.
+Customer: eight six oh zero.
+Agent: Got it, thank you.
+Customer: I received the wrong size. I ordered M but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.",TRUE,PHONE,pii_split|split_across_turns|spoken_number,"[{""start"": 57, ""end"": 77, ""label"": ""PHONE"", ""text"": ""nine zero zero eight"", ""entity"": ""g""}, {""start"": 106, ""end"": 123, ""label"": ""PHONE"", ""text"": ""eight six oh zero"", ""entity"": ""g""}]"
+ECOM_REALISTIC-0147,"Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.
+Customer: Can I add a gift message to the order?
+Agent: Yes, I've added it.
+Customer: I need a receipt for #17590251.
+Agent: You can download it from the order page. Let me know if you can't find it.
+Customer: Is there a number I can call?
+Agent: Our hotline is 1800 300 5136, open nine to six.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,business_contact|clean|lookalike_number,[]
+ECOM_REALISTIC-0148,"Customer: Is there a number I can call?
+Agent: Our hotline is 6778 8925, open nine to six.
+Agent: Which card did you use for order SG9867980793?
+Customer: 3799-799552-71778.",TRUE,CARD_NUMBER,business_contact|formatting_variant|lookalike_number|pii_single,"[{""start"": 155, ""end"": 172, ""label"": ""CARD_NUMBER"", ""text"": ""3799-799552-71778"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0153,"Agent: Hi Natalie, welcome back! How can I help today?
+Customer: Where do I send a complaint?
+Agent: Please write to support@shopsite.com and quote your order number.
+Customer: Is there a number I can call?
+Agent: Our hotline is 6863 7159, open nine to six.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,business_contact|clean|first_name_only,[]
+ECOM_REALISTIC-0156,"Customer: Can I get an update on #48217594?
+Agent: It's out for delivery today.
+Customer: Please update my account email to emily dot tan at yahoo dot com dot sg.
+Agent: Is there anything else?
+Customer: That's all, thank you.",TRUE,EMAIL,lookalike_number|pii_single|spoken_number,"[{""start"": 124, ""end"": 161, ""label"": ""EMAIL"", ""text"": ""emily dot tan at yahoo dot com dot sg"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0161,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Just use the saved card, the one ending 5816.
+Customer: Just use the saved card, the one ending zero seven two five.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0167,"Customer: My coupon FREESHIP isn't working.
+Agent: That code expired on October 8. I can offer you another one.
+Customer: Can I use two vouchers on one order?
+Agent: Only one voucher per order, I'm afraid.
+Customer: I was charged twice for #96326634.
+Agent: I'll check with payments. Any duplicate will be refunded within 14 working days.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0169,"Customer: What's the difference between the Dawn Light Lamp and the standard version?
+Agent: The main difference is the material and the warranty length.
+Customer: Does the Wireless Earbuds Pro come with a warranty?
+Agent: Yes, one year from the delivery date.
+Customer: Where do I send a complaint?
+Agent: Please write to help@shopsite.com.sg and quote your order number.",FALSE,,business_contact|clean|product_name,[]
+ECOM_REALISTIC-0172,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Please refund it to the card ending zero nine seven two.
+Agent: Noted, the refund goes to the card ending 4605.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0173,"Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Woodlands outlet.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|place_not_address,[]
+ECOM_REALISTIC-0174,"Customer: How long does shipping to Sentosa take?
+Agent: Usually 5 working days.
+Customer: Can I change the delivery slot for #36887258?
+Agent: Yes, I can move it to May 10. Morning or afternoon?
+Customer: Afternoon please.
+Customer: Is the Rose Gold Watch still returnable? It's been 30 days.
+Agent: Unused items are returnable within 14 days.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|lookalike_number|non_dob_date|place_not_address|product_name,[]
+ECOM_REALISTIC-0175,"Customer: Just call me Ravi, that's fine.",FALSE,,first_name_only|hard_negative|neg_name_not_full,[]
+ECOM_REALISTIC-0177,"Customer: Is the Jack Leather Wallet back in stock?
+Agent: We expect new stock by 18 November.
+Customer: My payment keeps failing. Can you charge it manually? The card is 4826773454019387.
+Customer: Please put James Walker as the gift recipient.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",TRUE,CARD_NUMBER|FULL_NAME,formatting_variant|non_dob_date|pii_count_2|pii_multi|product_name,"[{""start"": 171, ""end"": 187, ""label"": ""CARD_NUMBER"", ""text"": ""4826773454019387"", ""entity"": ""e0""}, {""start"": 210, ""end"": 222, ""label"": ""FULL_NAME"", ""text"": ""James Walker"", ""entity"": ""e1""}]"
+ECOM_REALISTIC-0178,"Customer: Please refund it to the card ending 7501.
+Agent: Noted, the refund goes to the card ending 0110.
+Agent: Is this the Visa ending 5484 on file?
+Customer: Yes, that's the one.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0179,"Agent: Hi Rachel, welcome back! How can I help today?
+Customer: Just call me Hui, that's fine.
+Customer: Just call me Aisyah, that's fine.",FALSE,,first_name_only|hard_negative|neg_name_not_full,[]
+ECOM_REALISTIC-0182,"Customer: Do you have the Dawn Light Lamp in S?
+Agent: Yes, L is in stock. Want me to add it to your cart?
+Customer: What's the difference between the Grace Linen Dress and the standard version?
+Agent: The main difference is the material and the warranty length.
+Customer: How long does shipping to Jurong take?
+Agent: Usually 3 working days.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|place_not_address|product_name,[]
+ECOM_REALISTIC-0184,"Customer: Is 1800 200 4734 the right number for returns?
+Agent: You can call our hotline on 1800 552 4463.",FALSE,,business_contact|hard_negative|neg_business_contact,[]
+ECOM_REALISTIC-0196,"Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Kuala Lumpur outlet.
+Customer: I need a receipt for SG5682996291.
+Agent: You can download it from the order page. Let me know if you can't find it.",FALSE,,clean|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0217,"Agent: Hi Aisyah, welcome back! How can I help today?
+Customer: Do you ship to Toa Payoh?
+Agent: Yes, we do. Delivery takes 7 working days.",FALSE,,clean|first_name_only|place_not_address,[]
+ECOM_REALISTIC-0220,"Agent: Hi there, how can I help you today?
+Customer: I received the wrong size. I ordered L but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: The Summer Tote Bag arrived damaged.
+Agent: I'm sorry to hear that. Could you upload a photo of the damage?
+Customer: Sure, uploading now.",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0223,"Customer: Can I change the delivery slot for SG1238780038?
+Agent: Yes, I can move it to November 10. Morning or afternoon?
+Customer: Afternoon please.
+Customer: Where is my order SG3639264957?
+Agent: It shipped yesterday and should arrive by 23/12/2026.",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0228,"Customer: The tracking number 6601002314290018 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.
+Customer: Where is my order #80848100?
+Agent: It shipped yesterday and should arrive by 11/10/2026.
+Customer: How long does shipping to Jurong take?
+Agent: Usually 2 working days.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|lookalike_number|non_dob_date|place_not_address,[]
+ECOM_REALISTIC-0230,"Agent: Hi Rachel, welcome back! How can I help today?
+Customer: I received the wrong size. I ordered size 8 but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: என் பெயர் ராஜேஷ் கண்ணன்.
+Customer: Is there a number I can call?
+Agent: Our hotline is 6366 7525, open nine to six.",TRUE,FULL_NAME,business_contact|first_name_only|multilingual_lang|pii_single,"[{""start"": 225, ""end"": 238, ""label"": ""FULL_NAME"", ""text"": ""ராஜேஷ் கண்ணன்"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0231,"Customer: Do you have the Wireless Earbuds Pro in size 42?
+Agent: Yes, L is in stock. Want me to add it to your cart?
+Customer: Is this a good gift for my seven year old?
+Agent: It's suitable for ages six and above.
+Customer: Is the Wireless Earbuds Pro waterproof?
+Agent: It's water-resistant but not fully waterproof.
+Customer: How long does shipping to Clementi take?
+Agent: Usually 7 working days.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,age_not_dob|clean|place_not_address|product_name,[]
+ECOM_REALISTIC-0235,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Do you accept PayNow?
+Agent: Yes, PayNow, cards and e-wallets are all accepted.
+Customer: My number is +65 9401 4890, oh wait that's my old one, use +65 8503 9261.",TRUE,PHONE,pii_selfcorr|self_correction,"[{""start"": 169, ""end"": 182, ""label"": ""PHONE"", ""text"": ""+65 9401 4890"", ""entity"": ""e0""}, {""start"": 215, ""end"": 228, ""label"": ""PHONE"", ""text"": ""+65 8503 9261"", ""entity"": ""e1""}]"
+ECOM_REALISTIC-0238,Agent: You can call our hotline on 6206 1632.,FALSE,,business_contact|hard_negative|neg_business_contact,[]
+ECOM_REALISTIC-0241,"Agent: Hi Aisyah, welcome back! How can I help today?
+Customer: Please refund it to the card ending 2925.
+Agent: Noted. It goes back to the original payment method.
+Customer: I received the wrong size. I ordered S but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: Is the Grace Linen Dress waterproof?
+Agent: It's water-resistant but not fully waterproof.",FALSE,,clean|first_name_only|partial_card|product_name,[]
+ECOM_REALISTIC-0243,"Customer: Where do I send a complaint?
+Agent: Please write to support@shopsite.com and quote your order number.
+Customer: Is there a number I can call?
+Agent: Our hotline is 6855 9821, open nine to six.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,business_contact|clean,[]
+ECOM_REALISTIC-0244,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Why was I charged S$3.90 for shipping?
+Agent: Orders under S$60 have a shipping fee.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean,[]
+ECOM_REALISTIC-0246,"Customer: Where is my order 99886497?
+Agent: It shipped yesterday and should arrive by September 12.",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0249,"Customer: I need a receipt for SG8754394353.
+Agent: You can download it from the order page. Let me know if you can't find it.
+Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.
+Customer: Can I add a gift message to the order?
+Agent: Yes, I've added it.
+Customer: Do you ship to Jurong?
+Agent: Yes, we do. Delivery takes 5 working days.",FALSE,,clean|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0250,"Customer: Where do I send a complaint?
+Agent: Please write to returns@shopsite.com and quote your order number.",FALSE,,business_contact|clean,[]
+ECOM_REALISTIC-0254,"Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.
+Customer: The tracking number SPX90772625701 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0256,"Agent: Hi Sarah, welcome back! How can I help today?
+Customer: Can you deliver on 2 January? I'll be home then.
+Customer: Why was I charged S$4.90 for shipping?
+Agent: Orders under S$60 have a shipping fee.",FALSE,,first_name_only|hard_negative|neg_non_dob_date|non_dob_date,[]
+ECOM_REALISTIC-0258,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: I need a receipt for #95679723.
+Agent: You can download it from the order page. Let me know if you can't find it.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0264,"Agent: Hi there, how can I help you today?
+Customer: Where is my order SG6570412009?
+Agent: It shipped yesterday and should arrive by October 17.
+Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.
+Customer: The tracking number 9177 5662 0563 4111 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.
+Customer: Do you have the Will Standing Desk in M?
+Agent: Yes, size 42 is in stock. Want me to add it to your cart?",FALSE,,clean|lookalike_number|non_dob_date|product_name,[]
+ECOM_REALISTIC-0265,"Customer: What's the difference between the cotton bedsheet set and the standard version?
+Agent: The main difference is the material and the warranty length.
+Customer: Is the cotton bedsheet set back in stock?
+Agent: We expect new stock by 21/02/2026.
+Customer: Is this a good gift for my 7 year old?
+Agent: It's suitable for ages six and above.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,age_not_dob|clean|non_dob_date|product_name,[]
+ECOM_REALISTIC-0270,"Agent: Hi there, how can I help you today?
+Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean,[]
+ECOM_REALISTIC-0273,"Agent: Hi Ryan, welcome back! How can I help today?
+Customer: Is there a number I can call?
+Agent: Our hotline is 1800 398 8201, open nine to six.",FALSE,,business_contact|clean|first_name_only,[]
+ECOM_REALISTIC-0274,"Customer: The payment failed twice.
+Agent: Sorry about that. Please try another payment method or check with your bank.
+Customer: Do you accept PayNow?
+Agent: Yes, PayNow, cards and e-wallets are all accepted.
+Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.",FALSE,,clean,[]
+ECOM_REALISTIC-0276,"Customer: Please refund it to the card ending 8036.
+Agent: Noted. It goes back to the original payment method.",FALSE,,clean|partial_card,[]
+ECOM_REALISTIC-0279,"Customer: How do I cancel #09634807?
+Agent: I can cancel it as long as it hasn't shipped. Done, you'll get a confirmation shortly.
+Customer: Do you ship to Tampines?
+Agent: Yes, we do. Delivery takes 5 working days.
+Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Tampines outlet.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0285,"Agent: Hi Kevin, welcome back! How can I help today?
+Customer: Is there a number I can call?
+Agent: Our hotline is 1800 900 4668, open nine to six.
+Customer: Where do I send a complaint?
+Agent: Please write to help@shopsite.com.sg and quote your order number.
+Customer: The tracking number 5895 5296 3863 9609 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.",FALSE,,business_contact|clean|first_name_only|lookalike_number,[]
+ECOM_REALISTIC-0289,"Customer: Just call me Emily, that's fine.
+Customer: Just call me James, that's fine.",FALSE,,first_name_only|hard_negative|neg_name_not_full,[]
+ECOM_REALISTIC-0292,"Agent: Hi there, how can I help you today?
+Customer: Is there a number I can call?
+Agent: Our hotline is 6027 2751, open nine to six.
+Customer: Where do I send a complaint?
+Agent: Please write to help@shopsite.com.sg and quote your order number.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,business_contact|clean,[]
+ECOM_REALISTIC-0295,"Customer: How do I return the ceramic dinner set?
+Agent: You can return it within 14 days. I'll send a return label.",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0298,"Customer: Is the Rose Gold Watch still returnable? It's been 7 days.
+Agent: Unused items are returnable within 14 days.
+Customer: How do I return the Rose Gold Watch?
+Agent: You can return it within 3 days. I'll send a return label.
+Customer: I received the wrong size. I ordered M but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0299,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Toa Payoh outlet.
+Customer: Can I add a gift message to the order?
+Agent: Yes, I've added it.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|place_not_address,[]
+ECOM_REALISTIC-0305,"Agent: Is this the Visa ending 6161 on file?
+Customer: Yes, that's the one.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0306,"Customer: I received the wrong size. I ordered size 42 but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: Is the 5L air fryer still returnable? It's been 3 days.
+Agent: Unused items are returnable within 14 days.",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0313,"Customer: I was charged twice for #86151718.
+Agent: I'll check with payments. Any duplicate will be refunded within 30 working days.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0314,"Agent: Hi there, how can I help you today?
+Customer: Is this a good gift for my eight year old?
+Agent: It's suitable for ages six and above.
+Customer: Is the Jack Leather Wallet back in stock?
+Agent: We expect new stock by 08/05/2027.
+Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,age_not_dob|clean|non_dob_date|product_name,[]
+ECOM_REALISTIC-0320,"Agent: Hi there, how can I help you today?
+Customer: Here's my card so you can charge it, three four eight five four six seven eight five four four five eight seven eight.
+Agent: Can I have the name on the order?
+Customer: Pei Shan Ng.
+Agent: Is there anything else?
+Customer: That's all, thank you.",TRUE,CARD_NUMBER|FULL_NAME,pii_count_2|pii_multi|spoken_number,"[{""start"": 90, ""end"": 170, ""label"": ""CARD_NUMBER"", ""text"": ""three four eight five four six seven eight five four four five eight seven eight"", ""entity"": ""e0""}, {""start"": 223, ""end"": 234, ""label"": ""FULL_NAME"", ""text"": ""Pei Shan Ng"", ""entity"": ""e1""}]"
+ECOM_REALISTIC-0321,"Agent: Hi there, how can I help you today?
+Customer: Is this a good gift for my 12 year old?
+Agent: It's suitable for ages six and above.
+Customer: Do you have the Will Standing Desk in L?
+Agent: Yes, M is in stock. Want me to add it to your cart?
+Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.",FALSE,,age_not_dob|clean|product_name,[]
+ECOM_REALISTIC-0325,"Agent: Is this the Visa ending six four oh eight on file?
+Customer: Yes, that's the one.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0326,"Agent: Hello, thanks for contacting us! How can I help?
+Agent: Is this the Visa ending seven five zero one on file?
+Customer: Yes, that's the one.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0330,"Agent: Hi there, how can I help you today?
+Customer: I received the wrong size. I ordered XL but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: Is the blue waterproof backpack still returnable? It's been 14 days.
+Agent: Unused items are returnable within 14 days.
+Customer: How do I return the Faith Yoga Mat?
+Agent: You can return it within 5 days. I'll send a return label.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0332,Customer: Is 1800 783 2584 the right number for returns?,FALSE,,business_contact|hard_negative|neg_business_contact,[]
+ECOM_REALISTIC-0339,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Where do I send a complaint?
+Agent: Please write to support@shopsite.com and quote your order number.
+Customer: Is there a number I can call?
+Agent: Our hotline is 6929 0490, open nine to six.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,business_contact|clean,[]
+ECOM_REALISTIC-0340,"Agent: Hi Michael, welcome back! How can I help today?
+Customer: Account verification: DOB 08/09/2000.
+Customer: Send the return label to nurul.nair@hotmail.com.
+Customer: Add 96856624 as the contact for order 88668826.
+Agent: Got it, thank you.",TRUE,DOB|EMAIL|PHONE,first_name_only|lookalike_number|pii_count_3|pii_multi,"[{""start"": 91, ""end"": 101, ""label"": ""DOB"", ""text"": ""08/09/2000"", ""entity"": ""e0""}, {""start"": 138, ""end"": 160, ""label"": ""EMAIL"", ""text"": ""nurul.nair@hotmail.com"", ""entity"": ""e1""}, {""start"": 176, ""end"": 184, ""label"": ""PHONE"", ""text"": ""96856624"", ""entity"": ""e2""}]"
+ECOM_REALISTIC-0349,"Customer: Can I change the delivery slot for SG0922216107?
+Agent: Yes, I can move it to November 28. Morning or afternoon?
+Customer: Afternoon please.
+Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.
+Customer: I need a receipt for #98066013.
+Agent: You can download it from the order page. Let me know if you can't find it.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0351,"Agent: Hi there, how can I help you today?
+Customer: What's the difference between the Hope Scented Candle and the standard version?
+Agent: The main difference is the material and the warranty length.
+Customer: Do you have the Jack Leather Wallet in S?
+Agent: Yes, L is in stock. Want me to add it to your cart?",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0352,"Agent: Hi Natalie, welcome back! How can I help today?
+Customer: Where do I send a complaint?
+Agent: Please write to support@shopsite.com and quote your order number.",FALSE,,business_contact|clean|first_name_only,[]
+ECOM_REALISTIC-0353,"Customer: Is the Rose Gold Watch still returnable? It's been 2 days.
+Agent: Unused items are returnable within 14 days.
+Customer: Please refund it to the card ending three five eight one.
+Agent: Noted. It goes back to the original payment method.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|partial_card|product_name,[]
+ECOM_REALISTIC-0356,"Agent: Hi Rachel, welcome back! How can I help today?
+Customer: Do you ship to Sentosa?
+Agent: Yes, we do. Delivery takes 3 working days.
+Customer: How do I cancel #95650455?
+Agent: I can cancel it as long as it hasn't shipped. Done, you'll get a confirmation shortly.
+Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.",FALSE,,clean|first_name_only|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0360,"Agent: Hi Daniel, welcome back! How can I help today?
+Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|first_name_only,[]
+ECOM_REALISTIC-0361,"Customer: Can I use two vouchers on one order?
+Agent: Only one voucher per order, I'm afraid.
+Customer: The courier couldn't reach me. My number is 86690967.",TRUE,PHONE,pii_single,"[{""start"": 148, ""end"": 156, ""label"": ""PHONE"", ""text"": ""86690967"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0368,"Customer: Where do I send a complaint?
+Agent: Please write to returns@shopsite.com and quote your order number.
+Customer: Is there a number I can call?
+Agent: Our hotline is 1800 673 4129, open nine to six.
+Customer: Is the Rose Gold Watch back in stock?
+Agent: We expect new stock by June 30.",FALSE,,business_contact|clean|non_dob_date|product_name,[]
+ECOM_REALISTIC-0369,"Customer: How do I return the ceramic dinner set?
+Agent: You can return it within 5 days. I'll send a return label.
+Customer: The Faith Yoga Mat arrived damaged.
+Agent: I'm sorry to hear that. Could you upload a photo of the damage?
+Customer: Sure, uploading now.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0373,"Agent: Hello, thanks for contacting us! How can I help?
+Agent: Where should we redeliver?
+Customer: Blk 400 Yishun Ring Road #27-201 Singapore 594687.",TRUE,ADDRESS,pii_single,"[{""start"": 100, ""end"": 149, ""label"": ""ADDRESS"", ""text"": ""Blk 400 Yishun Ring Road #27-201 Singapore 594687"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0374,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: The tracking number 8338 9888 1671 1207 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0375,"Customer: Is the Pearl Earrings still returnable? It's been 7 days.
+Agent: Unused items are returnable within 14 days.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0380,"Agent: Hi Ryan, welcome back! How can I help today?
+Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Yishun outlet.
+Customer: 我的出生日期是 2008年4月29日。
+Agent: Got it, thank you.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",TRUE,DOB,first_name_only|multilingual_lang|pii_single|place_not_address,"[{""start"": 177, ""end"": 187, ""label"": ""DOB"", ""text"": ""2008年4月29日"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0384,"Customer: Where do I send a complaint?
+Agent: Please write to returns@shopsite.com and quote your order number.
+Customer: Please change the delivery address for order 92513542 to 210 Orchard Road, #09-68, Singapore 512475.",TRUE,ADDRESS,business_contact|formatting_variant|lookalike_number|pii_single,"[{""start"": 179, ""end"": 221, ""label"": ""ADDRESS"", ""text"": ""210 Orchard Road, #09-68, Singapore 512475"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0385,"Agent: Hi Aisyah, welcome back! How can I help today?
+Customer: I need a receipt for 86815466.
+Agent: You can download it from the order page. Let me know if you can't find it.",FALSE,,clean|first_name_only|lookalike_number,[]
+ECOM_REALISTIC-0393,"Agent: Hi there, how can I help you today?
+Customer: I was charged twice for #72446176.
+Agent: I'll check with payments. Any duplicate will be refunded within 14 working days.",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0398,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Do you have the Grace Linen Dress in size 8?
+Agent: Yes, L is in stock. Want me to add it to your cart?
+Customer: What's the difference between the Hope Scented Candle and the standard version?
+Agent: The main difference is the material and the warranty length.
+Customer: Where is my order #03399378?
+Agent: It shipped yesterday and should arrive by 09/02/2026.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|lookalike_number|non_dob_date|product_name,[]
+ECOM_REALISTIC-0402,"Agent: Hi there, how can I help you today?
+Customer: The Dawn Light Lamp arrived damaged.
+Agent: I'm sorry to hear that. Could you upload a photo of the damage?
+Customer: Sure, uploading now.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0406,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Can I change the delivery slot for #85579415?
+Agent: Yes, I can move it to 29/11/2026. Morning or afternoon?
+Customer: Afternoon please.",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0409,Customer: Can you deliver on October 4? I'll be home then.,FALSE,,hard_negative|neg_non_dob_date|non_dob_date,[]
+ECOM_REALISTIC-0413,"Customer: The payment failed twice.
+Agent: Sorry about that. Please try another payment method or check with your bank.
+Customer: I was charged twice for #08656756.
+Agent: I'll check with payments. Any duplicate will be refunded within 2 working days.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0414,"Agent: Hi Ravi, welcome back! How can I help today?
+Customer: Is 6271 0405 the right number for returns?
+Agent: You can call our hotline on 6262 1815.",FALSE,,business_contact|first_name_only|hard_negative|neg_business_contact,[]
+ECOM_REALISTIC-0415,"Customer: I live around Orchard, near the MRT. Can you deliver there?
+Customer: I live around Toa Payoh, near the MRT. Can you deliver there?
+Customer: The tracking number 4944665743748969 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.",FALSE,,hard_negative|lookalike_number|neg_place_not_address|place_not_address,[]
+ECOM_REALISTIC-0416,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Is there a number I can call?
+Agent: Our hotline is 1800 147 3018, open nine to six.
+Customer: Where do I send a complaint?
+Agent: Please write to returns@shopsite.com and quote your order number.",FALSE,,business_contact|clean,[]
+ECOM_REALISTIC-0417,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: I'm looking at the Mark II Headphones, can it be gift wrapped?
+Customer: Is the Mark II Headphones available in black?",FALSE,,hard_negative|neg_name_not_full|product_name,[]
+ECOM_REALISTIC-0419,"Customer: What's the difference between the Hope Scented Candle and the standard version?
+Agent: The main difference is the material and the warranty length.
+Customer: Is this a good gift for my 5 year old?
+Agent: It's suitable for ages six and above.",FALSE,,age_not_dob|clean|product_name,[]
+ECOM_REALISTIC-0420,Agent: Or email help@shopsite.com.sg with your order number.,FALSE,,business_contact|hard_negative|neg_business_contact,[]
+ECOM_REALISTIC-0422,"Customer: I need a receipt for #87148727.
+Agent: You can download it from the order page. Let me know if you can't find it.
+Customer: Do you ship to Toa Payoh?
+Agent: Yes, we do. Delivery takes 5 working days.
+Customer: How do I cancel 91115931?
+Agent: I can cancel it as long as it hasn't shipped. Done, you'll get a confirmation shortly.
+Customer: How long does shipping to Orchard take?
+Agent: Usually 5 working days.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0425,"Agent: Hello, thanks for contacting us! How can I help?
+Agent: Can I confirm the contact number?
+Customer: 8343 5240.
+Agent: Is there anything else?
+Customer: That's all, thank you.",TRUE,PHONE,pii_single,"[{""start"": 107, ""end"": 116, ""label"": ""PHONE"", ""text"": ""8343 5240"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0431,"Customer: How do I cancel SG8898645652?
+Agent: I can cancel it as long as it hasn't shipped. Done, you'll get a confirmation shortly.
+Customer: Can I add a gift message to the order?
+Agent: Yes, I've added it.
+Customer: I need a receipt for SG4213882090.
+Agent: You can download it from the order page. Let me know if you can't find it.",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0433,"Customer: Is the Grace Linen Dress still returnable? It's been 3 days.
+Agent: Unused items are returnable within 14 days.",FALSE,,clean|product_name,[]
+ECOM_REALISTIC-0440,"Customer: Just use the saved card, the one ending four three eight zero.",FALSE,,hard_negative|neg_partial_card|partial_card,[]
+ECOM_REALISTIC-0441,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.",FALSE,,clean,[]
+ECOM_REALISTIC-0446,"Customer: Can you deliver on 7 February? I'll be home then.
+Customer: Is the Grace Linen Dress waterproof?
+Agent: It's water-resistant but not fully waterproof.",FALSE,,hard_negative|neg_non_dob_date|non_dob_date|product_name,[]
+ECOM_REALISTIC-0447,"Customer: Why was I charged S$12.90 for shipping?
+Agent: Orders under S$50 have a shipping fee.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean,[]
+ECOM_REALISTIC-0448,"Customer: Where is my order 88487297?
+Agent: It shipped yesterday and should arrive by 12 October.",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0449,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: My voucher expires on 29 August, can I still use it?",FALSE,,hard_negative|neg_non_dob_date|non_dob_date,[]
+ECOM_REALISTIC-0458,"Customer: Is this a good gift for my seven year old?
+Agent: It's suitable for ages six and above.
+Customer: Is the Dawn Light Lamp back in stock?
+Agent: We expect new stock by 09/02/2026.
+Customer: Can I get an update on SG1741011947?
+Agent: It's out for delivery today.",FALSE,,age_not_dob|clean|lookalike_number|non_dob_date|product_name,[]
+ECOM_REALISTIC-0459,"Customer: Why was I charged S$9.90 for shipping?
+Agent: Orders under S$40 have a shipping fee.
+Customer: I was charged twice for SG7627023244.
+Agent: I'll check with payments. Any duplicate will be refunded within 2 working days.
+Agent: Is there anything else?
+Customer: That's all, thank you.",FALSE,,clean|lookalike_number,[]
+ECOM_REALISTIC-0460,"Customer: I need a receipt for 87141633.
+Agent: You can download it from the order page. Let me know if you can't find it.
+Customer: Can I pick it up at the store instead?
+Agent: Yes, collection is available at our Clementi outlet.
+Customer: Is there a number I can call?
+Agent: Our hotline is 6334 3333, open nine to six.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,business_contact|clean|lookalike_number|place_not_address,[]
+ECOM_REALISTIC-0474,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Is there a number I can call?
+Agent: Our hotline is 1800 968 8901, open nine to six.
+Customer: Where do I send a complaint?
+Agent: Please write to returns@shopsite.com and quote your order number.
+Customer: Please refund it to the card ending 2101.
+Agent: Noted. It goes back to the original payment method.
+Customer: Thanks for your help.
+Agent: You're welcome, have a great day!",FALSE,,business_contact|clean|partial_card,[]
+ECOM_REALISTIC-0483,"Agent: Hi Rachel, welcome back! How can I help today?
+Customer: I was charged twice for #15847768.
+Agent: I'll check with payments. Any duplicate will be refunded within 3 working days.
+Customer: Do you accept PayNow?
+Agent: Yes, PayNow, cards and e-wallets are all accepted.
+Customer: My coupon FREESHIP isn't working.
+Agent: That code expired on 07/03/2027. I can offer you another one.
+Customer: How do I reset my password?
+Agent: Use 'Forgot password' on the login page and follow the steps.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|first_name_only|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0485,"Customer: Is there a number I can call?
+Agent: Our hotline is 1800 398 8032, open nine to six.
+Agent: Customs needs the recipient's ID for this import. Please provide it.
+Customer: T9711798A.",TRUE,NRIC_PASSPORT,business_contact|pii_single,"[{""start"": 181, ""end"": 190, ""label"": ""NRIC_PASSPORT"", ""text"": ""T9711798A"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0487,"Agent: Hello, thanks for contacting us! How can I help?
+Customer: Can I add a gift message to the order?
+Agent: Yes, I've added it.
+Customer: Send to 515 Woodlands Drive 14, #03-246, Singapore 661219 lah, got lift one.
+Customer: My parcel says delivered but I didn't get it.
+Agent: I'm sorry. Please check with your neighbours and the lobby, and I'll open a case with the courier.",TRUE,ADDRESS,formatting_variant|pii_single|singlish,"[{""start"": 150, ""end"": 199, ""label"": ""ADDRESS"", ""text"": ""515 Woodlands Drive 14, #03-246, Singapore 661219"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0489,"Customer: Is there a number I can call?
+Agent: Our hotline is 6174 2243, open nine to six.
+Customer: Where do I send a complaint?
+Agent: Please write to help@shopsite.com.sg and quote your order number.",FALSE,,business_contact|clean,[]
+ECOM_REALISTIC-0494,"Customer: Why was I charged S$11.90 for shipping?
+Agent: Orders under S$50 have a shipping fee.
+Customer: Hello, this is Ms Pei Shan Lee, I placed an order yesterday.",TRUE,FULL_NAME,name_with_title|pii_single,"[{""start"": 124, ""end"": 136, ""label"": ""FULL_NAME"", ""text"": ""Pei Shan Lee"", ""entity"": ""e0""}]"
+ECOM_REALISTIC-0495,"Agent: Hi Rachel, welcome back! How can I help today?
+Customer: Is the blue waterproof backpack still returnable? It's been 5 days.
+Agent: Unused items are returnable within 14 days.
+Customer: I received the wrong size. I ordered L but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: How do I return the 5L air fryer?
+Agent: You can return it within 14 days. I'll send a return label.
+Agent: Anything else I can help with?
+Customer: No, that's all. Thanks!",FALSE,,clean|first_name_only|product_name,[]
+ECOM_REALISTIC-0498,"Customer: The tracking number 9912 9710 2481 7175 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.
+Customer: Can I change the delivery slot for #94747219?
+Agent: Yes, I can move it to May 13. Morning or afternoon?
+Customer: Afternoon please.
+Customer: The tracking number 6715778711216636 hasn't updated in two days.
+Agent: Sorry about that. I've asked the courier to check, so expect an update within 24 hours.",FALSE,,clean|lookalike_number|non_dob_date,[]
+ECOM_REALISTIC-0500,"Customer: I received the wrong size. I ordered size 8 but got a different one.
+Agent: Sorry about that. Exchange or refund?
+Customer: Exchange please.
+Customer: Please refund it to the card ending 2644.
+Agent: Noted. It goes back to the original payment method.",FALSE,,clean|partial_card,[]

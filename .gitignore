@@ -1,0 +1,18 @@
+# Secrets
+.env
+
+# Environments and caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Kept locally, not published: the data generator (needs a local helper module) and a JSONL copy of the dev set
+gen_ecom_sets.py
+ecom_realistic_dev_150.jsonl
+
+# Run outputs: every run writes here. The runs behind the README numbers are copied to results/
+runs/
+
+# Office lock files
+~$*
